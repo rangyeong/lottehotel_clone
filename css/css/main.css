@@ -1,0 +1,1008 @@
+@charset "utf-8";
+/* main.css */ 
+
+#wrap{
+    position: relative;
+    width: 100%;
+}
+.hide{
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    color: transparent;
+}
+
+/* 모바일 - 최상단 */
+#topBn{
+    position: relative;
+    background-color: #432f31;
+}
+.tb_content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 39px;
+}
+.tb_content .ment{
+    margin-right: 10px;
+    color:#fff;
+    font-size: 13px;
+
+}
+.tb_content .link a{
+    color: #998465;
+    font-size: 13px;
+    text-decoration: underline;
+}
+.tb_close{
+    position: absolute;
+    top: 9px;
+    right: 10px;
+    color: #fff;
+    opacity: 0.6;
+}
+.topEvent{
+    display: none;
+}
+
+/* 모바일 - 헤더 */
+/* .main1{
+    position: relative;
+    height: 154px;
+    background-color: rgba(255, 255, 255, 0.8);
+} */
+/* #header{
+    z-index: 500;
+} */
+#head1{
+    display: flex;
+    justify-content: space-between;
+    align-items:content ;
+    height: 56px;
+    padding: 0 20px;
+    border: 1px solid #ad9e87;
+    /*  */
+    position: relative;
+    height: 154px;
+    background-color: rgba(255, 255, 255, 0.8);
+    z-index: 500;
+    }
+.logo a{
+    display: block;
+    width: 219px;
+    height: 30px;
+    text-indent: -9999px;
+    background-image: url(../img/logo_h.png);
+}
+.h_search_mo{
+    padding: 24px;
+    background-color: rgba(135, 132, 101, 0.8);
+}
+.h_search_mo a{
+    display: block;
+    padding: 0 16px;
+    line-height: 48px;
+    color: #333;
+    background-color: #fff;
+}
+.h_search_om a span{
+    vertical-align: top;
+    margin-top: 12px;
+    margin-right: 4px;
+    color: #444;
+}
+.h_util, #head2{
+    display: none;
+}
+
+/* 모바일 - 본문1 */
+.main1{
+    position: relative;
+    margin-bottom: 70px ;
+}
+.main_slide img{
+    width: 100%;
+    height: 80vh;
+    /* 화면의 폭에 따라서는 이미지의 변경 없이 크기에 맞춰 커짐
+    하지만 높이에 따라서는 이동함. */
+    /* 
+        *vw와 vh단위
+        화면 크기에 비례적용되는 단위
+        100vw = 화면의 너비값
+        100vh = 화면의 높이값
+    */
+    min-height: 600px;
+    object-fit: cover;
+    /* 가로 세로 비율이 맞지 않아서 이미지 찌그러질 때 화면 
+    밖으로 나가게 해서 맞춰줌. 화면 크기에 따라 상대적으로 조금씩 위치가 변경 될 때 사용. */
+}
+.ms_img .pc{
+    display: none;
+}
+.ms_text{
+    position: absolute;
+    top: 43%;
+    left: 7vw;
+}
+.ms_text .mst1{
+    font-size: 9vw;
+    /* vw단위로 폰트사이즈를 맞추기. 최근 많이 쓰이고 있지만 브레이크 포인트를 잘게 쪼개서 폰트 크기 확인, 조정 해야함. */
+    line-height: 1.4em;
+    /* margin-bottom: 15px; */
+}
+.ms_text .mst2{
+    flex-wrap: wrap;
+    font-size: 3.2vw;
+    /* vw단위로 폰트사이즈를 맞추기. 최근 많이 쓰이고 있지만 브레이크 포인트를 잘게 쪼개서 폰트 크기 확인, 조정 해야함. */
+    /* %값은 부모태그 영역에 따라 크기가 바뀌니 어느 영역에서 쓰냐에 따라서 크기 값이 달라지는데 vw 단위는 브라이저 크기에 비례하기 때문에 어떤 영역에 쓰던지 크기가 동일하다. */
+    line-height: 1.4em;
+    /* font-size: 12px; */
+    color: #555;
+}
+.ms_text .mst3 a{
+    display: flex;
+    align-items: center;
+    color: #555;
+    font-size: 3.2vw;
+    /* font-size: 12px; */
+}
+.ms_text .mst3 a::after{
+    content: "";
+    display: inline-block;
+    vertical-align: top;
+    /* 표준문법 상 middle 등은 못알아 듣는 경우가 있기 때문에 top값만 사용하기 */
+    margin-left: 3px;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #000;
+    border-right: 1px solid #222;
+    transform:rotate(45deg) ;
+
+}
+/* 1.정사각형 만들고, 보더라인으로 'ㄱ'모양 만들고 3. rotate로 45deg 꺽어주기 */
+.ms_play, .ms_pause{
+    display: none;
+}
+.ms_pager{
+    position: absolute;
+    bottom: 7dvw;
+    left: 7vw;
+    /* margin-right: -60px;
+    width: 120px;
+    height: 1px;
+    background-color: #fff; */
+}
+.ms_pager ul{
+    display: flex;
+}
+.ms_pager li{
+    width: 15vw;
+    height: 0.7vw;
+    background-color: #fff;
+    text-indent: -9999px;
+    opacity: 0.5;
+}
+.ms_pager .on{
+    opacity: 1;
+}
+.btn_scrollDown{
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    width: 110px;
+    height: 70px;
+    margin-left: -55px;
+    text-indent: -9999px;
+    background-image: url(../img/icon-pagedown.gif);
+    background-size: 100% auto;
+}
+
+/* 모바일 - 본문2 */ 
+.main2{
+    padding-left: 20px;
+    margin-bottom: 60px;
+}
+.m2_top{
+    margin-bottom: 39px ;
+}
+.m2_top .m2_title{
+    font-size: 23px;
+    line-height: 1.2em;
+    color: #998465;
+}
+.m2_more a{
+    font-size: 13px;
+    color: #222;
+}
+.m2_more::after{
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #222;
+    border-right: 1px solid #222;
+    transform: rotate(45deg);
+}
+.promo_list{
+    overflow: hidden;
+    /* 넘치는 값 부모태그에 줘야 화면이 100%로 보임 */
+
+}
+.promo_list ul{
+    display: flex;
+    box-sizing: border-box;
+    padding: 0 8px;
+    width: 250%;
+}
+.promo_list li{
+    width: 33.33%;
+    /* padding-right: 23px; */
+    padding: 0 12px;
+    /* 전체 영역 간격보다 카드 사이의 간격이 더 넓어서... */
+    box-sizing: border-box;
+}
+.promo_photo{
+    margin-bottom: 16px;
+}
+.promo_photo img{
+    width: 100%;
+    height: auto;
+}
+.promo_name{
+    font-size: 18px;
+    font-weight: 500;
+    color: #998465;
+    padding-bottom: 16px;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #222;
+}
+.promo_ment{
+    margin-bottom: 41px;
+}
+.promo_btn{
+    width: 134px;
+    height: 35px;
+    color: #fff;
+    background-color: #998465;
+}
+
+/* 모바일 - 본문3 */
+.main3{
+    position: relative;
+    padding-top: 70px;
+}
+.m3_bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+}
+.m3_bg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.65;
+}
+.m3_bg .pc{
+    display: none;
+}
+.m3_inner{
+    position: relative;
+    color: #fff;
+}
+.m3_title{
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 1.3em;
+    /* line-height에서 em 단위 생략해도 됨 */
+}
+.m3_box{
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 6px;
+    margin: 0 24px 16px 24px;
+    padding: 20px;
+}
+.m3_box dt{
+    position: relative;
+    background-size: 144px auto;
+    background-repeat: no-repeat;
+    background-position: 0 center;
+    text-indent: -9999px;
+    /* background-color: mediumseagreen; */
+    /* 화면의 폭에 따라 영역이 늘었다, 줄었다 함. 뭐 때문이지? */
+}
+.m3_box dt::after, .m3_box dt::before{
+    content: "";
+    display: block;
+    position: absolute;
+    color: #fff;
+}
+.m3_box dt::before{
+    right: 25px;
+    top: 11px;
+    width: 11px;
+    height: 1px;
+}
+.m3_box dt::after{
+    right: 25px;
+    top: 11px;
+    width: 1px;
+    height: 11px;
+}
+.brand1 dt{
+    background-image: url(../img/brand-logo-1.png);
+}
+.brand2 dt{
+    background-image: url(../img/brand-logo-2.png);
+}
+.brand3 dt{
+    background-image: url(../img/brand-logo-3.png);
+}
+.brand4 dt{
+    background-image: url(../img/brand-logo-4.png);
+}
+.brand5 dt{
+    background-image: url(../img/brand-logo-5.png);
+}
+.brand6 dt{
+    background-image: url(../img/brand-logo-6.png);
+}
+.m3_box dd{
+    display: none;
+}
+
+/* 모바일 - 본문4 */
+.m4_inner{
+    position: relative;
+}
+.m4_list{
+    position: relative;
+}
+.chain_photo .pc{
+    display: none;
+}
+.chain_photo img{
+    width: 100%;
+    height: auto;
+    min-height: 640px;
+    object-fit: cover;
+}
+/* .m4_photo img{
+    height: 640px;
+} */
+.chain_text{
+    position: relative;
+    font-weight: 500;
+    margin: -25% 24px 0 24px;
+    padding: 24px 40px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+/* .chain_text{
+    position: absolute;
+    bottom: -80px;
+    right: 50%;
+    margin-right: -136px;
+    width: 272px;
+    height: 182px;
+    background-color: rgba(255, 255, 255, 0.5);
+} */
+/* .chain_text p{
+    text-align: center;
+} */
+.chain_name{
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #998465;
+}
+.chain_info{
+    height: 60px;
+    margin-bottom: 10px;
+    color: #555;
+    /* 3줄까지만 텍스트를 보여준다는 뜻 */
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.chain_more a{
+    display: inline-block;
+    /* margin-right: auto;
+    margin-left: auto; */font-size: 13px;
+    padding: 7px 16px;
+    border: 2px solid #998465;
+    color: #998465;
+
+}
+.m4_prev{
+    position: absolute;
+    top: 50%;
+    margin-top: -14px;
+    left: 20px;
+    width: 28px;
+    height: 28px;
+    border-top: 1px solid #fff;
+    border-left: 1px solid #fff;
+    transform: rotate(-45deg);
+}
+.m4_next{
+    position: absolute;
+    top: 50%;
+    margin-top: -14px;
+    right: 20px;
+    width: 28px;
+    height: 28px;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: rotate(45deg);
+}
+/* 위에 두개 공통요소 묶어서 회전각, x위치 개별 지정하기 */
+
+/* 모바일 - 본문5 */
+.main5{
+    margin-bottom: 100px;
+}
+.m5_inner img{
+    width: 100%;
+    height: auto;
+}
+.m5_img.pc{
+    display: none;
+}
+
+/* 모바일 - 본문6 */
+.main6{
+    margin-bottom: 73px;
+}
+.m6_inner{
+    position: relative;
+}
+/* .m6_bs{
+    position: relative;
+} */
+.bs_img img{
+    width: 100%;
+    height: auto;
+}
+.bs_img .pc{
+    display: none;
+}
+.bs_pager{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    /* right: 50%;
+    bottom: 11px;
+    margin-right: -122px; */
+    /* left: 12vw;
+    bottom: 3vw; */
+}
+.bs_pager ul{
+    display: flex;
+    justify-content: center;
+}
+.bs_pager li{
+    /* width: 18vw;
+    height: 0.4vw; */
+    width: 61px;
+    height: 2px;
+    background-color: #fff;
+    opacity: 0.5;
+    text-indent: -9999px;
+}
+.bs_pager .on{
+    opacity: 1;
+}
+
+/* 모바일 - 본문7 */
+.main7{
+    margin: 0 24px 90px 24px;
+    text-align: center;
+    font-size: 13px;
+    color: #555;
+}
+
+/* 모바일 - 푸터 */
+.quic_img{
+    margin-bottom: 10px;
+    width: 40px;
+    height: auto;
+    text-indent: -9999px;
+    border-radius: 50px;
+    box-shadow: 5px 5px 5px #999;
+}
+.quick img{
+    height: 40px;
+}
+
+
+/* 480px 시작 (모바일 가로모드)
+320*480 모바일의 가로 화면 모드에 대비 */
+@media screen and (min-width: 480px) {
+    .ms_text .mst1{
+        font-size: 7vW;
+    }
+    .ms_text .mst2{
+        font-size: 3.2vW;
+    }
+    .ms_text .mst3 a{
+        font-size: 3.2vW;
+    }
+} /* 480 끝 */
+
+/* 768 시작(모바일 가로모드) */
+@media screen and (min-width:768px) {
+    /* 768 - 본문1 */
+    .ms_text .mst1{
+        margin-bottom: 20px;
+        font-weight: 500;
+        line-height: 1.25;
+    }
+    .ms_text .mst2{
+        margin-bottom: 20px;
+        font-size: 2.4vW;
+    }
+    .ms_text .mst2 br{
+        display: none;
+    }
+    .ms_text .mst3 a{
+        font-size: 2.4vW;
+    }
+    .ms_btn{
+        position: absolute;
+        right: 7vw;
+        bottom: 7vw;
+        display: flex;
+        align-items: center;
+    }
+    .ms_pager{
+        position: static;
+        /* 포지션이 사용되지 않았던 기본 상태로 돌려줌.
+        position: asolute 취소 */
+        margin-right: 20px;
+    }
+    .ms_pager li{
+        width: 60px;
+        height: 4px;
+    }
+    .ms_play, .ms_pause{
+        display: block;
+        width: 20px;
+        height: 20px;
+        /* 교차하면서 나타났다 사라졌다 할 때 2개 버튼 형태는 달라도 크기는 일치하게 만들어주기. */
+    }
+    .ms_play{
+        display: none;
+    }
+    .ms_play::before{
+        /* 재생버튼(오른쪽 화살표)만드는 법
+        크기가 0*0인 상태로 border값을 주면 삼각형(딱지모양에서 보일 부분 선택)이 만들어진다. */
+        content: "";
+        display: block;
+        width: 0;
+        height: 0;
+        border-left: 14px solid #fff;
+        border-top: 9px solid transparent;
+        border-bottom: 9px solid transparent;
+        margin-left: 3px;
+        margin-top: 2px;
+    }
+    .ms_pause{
+        display: flex;
+        justify-content: space-between;
+    }
+    .ms_pause::before, .ms_pause::after{
+        /* 막대기 2개 만들기 */
+        content: "";
+        display: block;
+        width: 4px;
+        height: 20px;
+        background-color: #fff;
+        opacity: 0.8;
+    }
+
+    /* 모바일 가로 - 본문2 */
+    .m2_top .m2_title br{
+        display: none;
+    }
+    .promo_list ul{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 8px;
+    }
+    .promo_ment{
+        font-size: 13px;
+    }
+    .promo_btn{
+        /* width: 134px;
+        height: 35px; */
+        width: 17vw;
+        height: 4.5vw;
+    }
+    .promo_ment, .promo_btn a{
+        font-size: 1.8vw;
+    }
+
+    /* 768 - 본문4 */
+    .main4{
+        padding: 120px 0;
+    }
+    .m4_inner{
+        padding: 0 100px;
+    }
+    .chain_photo image-rendering: {
+        height: 500px;
+        min-height: auto;
+        /* 모바일에서 썻던 최소높이 값이 지금보다 크니까 최소높이값 auto로 수정 */
+    };
+    .chain_text{
+        max-width: -20%;
+        border-color: #998465;
+    }
+
+    /* 768 - 본문6 */
+    .bs_prev, .bs_next{
+        position: absolute;
+        top: 50%;
+        margin-top: -11px;
+        /* 텍스트가 밑으로 좀 내려가 버려서 그런가 */
+        display: block;
+        width: 20px;
+        height: 20px;
+        border-top: 1px solid #ffffff;
+        border-right: 1px solid #ffffff;
+    }
+    .bs_prev{
+        left: 30px;
+        transform: rotate(-135deg);
+    }
+    .bs_next{
+        right: 30px;
+        transform: rotate(45deg);
+    }
+    
+
+} /* 768 끝 */
+
+/* 1024 시작 */
+@media screen and (min-width:1024px) {
+    /* 1024 - 상단 이벤트 */
+    .topEvent{
+
+        position: relative;
+        display: block;
+        height: 90px;
+    }
+    .topEvent img{
+        position: absolute;
+        top: 0;
+        /* 화면이 좁아져도 배너의 가운데가 보이기위해 left:50% */
+        left: 50%;
+        margin-left: -950px;
+    }
+    /* 1024 - 헤더 */
+    #header{
+        height: 131px;
+    }
+    #head1{
+        align-items: flex-start;
+        height: 44px;
+        border: 0;
+        border-bottom: 1px solid #dcdcdc;
+    }
+    .logo{
+        margin-top: 4px;
+    }
+    .logo a{
+        width: 257px;
+        height: 35px;
+        background-image: url(../img/logo_h.png);
+    }
+    .open_menu{
+        display: none;
+    }
+    .h_util{
+        display: flex;
+        margin-top: 12px;
+    }
+    .h_util ul{
+        display: flex;
+    }
+    .h_util li a{
+        color: #666;
+    }
+    .h_util li::after{
+        content: "";
+        display: inline-block;
+        vertical-align: top;
+        width: 1px;
+        height: 12px;
+        margin: 4px 10px;
+        background-color: #e0e0e0;
+        
+    }
+    .util .h_lang{
+        margin-right: 10px;
+    }
+    .h_util .default .material-icons{
+        margin-top: 2px;
+        margin-left: -3px;
+        font-size: 18px;
+        color: #999;
+    }
+    .h_lang .flag{
+        display: inline-block;
+        vertical-align: top;
+        width: 18px;
+        height: 18px;
+        margin-top: 2px;
+        background-image: url(../img/ico-lang.png);
+    }
+    .h_lang .flag.ko{
+        background-position: -10px -250px;
+    }
+    #head2{
+        display: flex;
+        justify-content: center;
+        display: block;
+        height: 85px;
+        border-bottom: 1px solid #e0e0e0;
+    }
+    .btn_open_reserve{
+        padding-top: 25px;
+    }
+    .btn_open_reserve a{
+        font-size: 18px;
+        color: #998465;
+        line-height: 35px;
+        font-weight: 700;
+    }
+    .btn_open_reserve a span{
+        margin-top: 14px;
+        font-size: 21px;
+    }
+    .pc_gnb{
+        padding-top: 25px;
+    }
+    .pc_gnb ul{
+        display: flex;
+        justify-content: center;
+    }
+    .pc_gnb li{
+        padding: 0 20px;
+    }
+    .pc_gnb li a{
+        font-size: 18px;
+        color: #333;
+        line-height: 35px;
+    }
+    .h_
+
+    /* 1024 - 메인1 */
+    .main1{
+        margin-top: -131px;
+    }
+    .ms_img .pc{
+        display: block;
+        height: 905px;
+    }
+    .ms_img .mo{
+        display: none;
+    }
+    .ms_text{
+        top: 380px;
+    }
+    .ms_text .mst1{
+        font-size: 50px;
+    }
+    .ms_text .mst1 br{
+        display: none;
+    }
+    .ms_text .mst2{
+        font-size: 16px;
+    }
+    .ms_text .mst3 a{
+        font-size: 16px;
+    }
+
+    /* 1024 - 본문2 */
+    .promo_btn{
+    }
+
+    /* 1024 - 본문3 */
+    .main3{
+        margin-bottom: 130px;
+        padding-top: 130px;
+        padding-bottom: 200px;
+    }
+    .m3_bg .pc{
+        display: block;
+    }
+    .m3_bg .mo{
+        display: none;
+    }
+    .main3 h2{
+        font-size: 38px;
+    }
+    .main3 h2 br{
+        display: none;
+    }
+    .m3_list{
+        display: flex;
+        padding: 9px;
+    }
+    .m3_box{
+        width: 16.66%;
+        padding: 0 15px;
+        margin: 0;
+        border: 0;
+    }
+    .m3_box dt{
+        border-top: 2px solid #fff;
+        opacity: 0.5;
+    }
+    .m3_box dt::before, .m3_box dt::after{
+        display: none;
+    }
+    .m3_box.active dt{
+        /* m3_box와 active가 동시에 썼을 때 적용
+        띄어쓰기 > 포함관계가 적용된다는 뜻
+        띄어쓰기를 안했을 땐 and의 뜻 */
+        opacity: 1;
+    }
+    .m3_box.active dd{
+        display: block;
+    }
+
+    /* 1024 - 본문4 */
+    .chain_photo .pc{
+        display: block;
+    }
+    .chain_photo .mo{
+        display: none;
+    }
+    .chain_text{
+        margin-top: -12%;
+    }
+
+    /* 1024 - 본문5 */
+    .m5_img.mo{
+        display: none;
+    }
+    .m5_img.pc{
+        display: block;
+    }
+
+    /* 1024 - 본문 6 */
+    .m6_inner{
+        width: 890px;
+        margin: 0 auto;
+    }
+    .m6_bs .pc{
+        display: block;
+    }
+
+    .m6_bs .mo{
+        display: none;
+    }
+
+        
+    } /* 1024 끝 */
+
+/* 1520 시작 */
+/* 스크롤바(17px)포함 값. 스크롤바 영역은 콘텐츠가 보이지 않으니 여유를 두고 너비값 지정 */
+@media screen and (min-width:1520px) {
+    /* 1520 - 헤더 */
+    #head2{
+        position: relative;
+    }
+    .h_reward_btn{
+        display: block;
+        position: absolute;
+        top: 21px;
+        right: 20px;
+    }
+    .h_reward_btn a{
+        display: block;
+        padding: 0 20px;
+        line-height: 40px;
+        background-color: #ad9e87;
+        letter-spacing: -1px;
+        color: #fff;
+    }
+    /* 1520 - 본문1 */
+    .main1{
+        width: 1920px;
+        margin: 0 auto auto 150px;
+    }
+    .ms_text{
+        left: 50%;
+        margin-left: -750px;
+    }
+    .ms_btn{
+        right: 50%;
+        margin-right: -750px;
+        bottom: 60px;
+    }
+
+    /* pc - 본문2 */
+    .main2{
+        width: 1500px;
+        margin: 0 auto;
+        /* margin-left: auto;
+        margin-right: auto; */
+    }
+    .promo_list ul{
+        justify-content: space-between;
+        padding: 0;
+    }
+    .promo_list li{
+        width: 420px;
+        padding: 0;
+    }
+.promo_btn{
+ width: 222px;   
+ height: 52px;
+}
+
+/* 본문 3 */
+.main3{
+    max-width: 1920px;
+}
+.m3_inner{
+    width: 1500px;
+    margin: 0 auto;
+    /* ? 머선 의미고,,, */
+}
+
+
+/* 본문4 */
+.main4{
+    width: 1920px;
+    margin: 0 auto;
+}
+.m4_inner{
+    box-sizing: border-box;
+    width: 1500px;
+    margin: 0 auto;
+    padding: 0 220px;
+}
+.chain_text{
+    margin: -10% 165px 0 165px;
+}
+.chain_prev{
+    left: 6px;
+}
+.chain_prev{
+    right: 6px;
+}
+
+/* 본문5 */
+.main5{
+    margin-bottom: 130px;
+    overflow: hidden;
+}
+.m5_inner{
+    width: 1500px;
+    margin: 0 auto;
+}
+.m5_inner img{
+    width: 1920px;
+    margin-left: -210px;
+}
+
+/* 본문7 */
+.main7{
+    margin: 0 0 150px 0;
+}
+.m7_inner{
+    width: 1300px;
+    margin: 0 auto;
+}
+
+} /* 1520 끝 */
